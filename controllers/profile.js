@@ -1,5 +1,7 @@
 function handleProfile (req, res, db) {
     const {id} = req.params;
+
+    //Retrieves user information from database
     db.select('*').from('users').where({
         id: id
     })

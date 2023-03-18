@@ -6,6 +6,7 @@ import register from './controllers/register.js';
 import signin from './controllers/signin.js';
 import image from './controllers/image.js';
 
+//Configures knex for accessing database
 const db = knex({
     client: 'pg',
     connection: {
@@ -16,9 +17,12 @@ const db = knex({
     }
   });
 
+//Configures express and cors
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+//The following are functions to handle the different endpoints
 
 app.get('/', function (req, res) {
     res.json('Success');
@@ -44,6 +48,7 @@ app.post('/imageurl', function(req, res) {
     image.handleApiCall(req, res)
 })
 
+//Listen on the environment variable port or port 3000 if non is available
 app.listen(process.env.PORT || 3000, function() {
     console.log(`app is running on port ${process.env.PORT}`);
 })
