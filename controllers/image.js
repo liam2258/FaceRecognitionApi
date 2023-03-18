@@ -2,7 +2,7 @@ import Clarifai from 'clarifai';
 
 //Connects to Clarifai using api key
 const app = new Clarifai.App({
-    apiKey: API_KEY
+    apiKey: process.env.API_KEY
    });
 
 //Sends request to Clarifai api
