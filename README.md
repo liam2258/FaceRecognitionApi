@@ -1,5 +1,6 @@
-# FaceRecognitionApiPublic
+# FaceRecognitionApi
 
 View live here (https://liam2258.github.io/FaceRecognition/)
+And the front-end here (https://github.com/liam2258/FaceRecognition)
 
-A REST based back end server of a web app written in Nodejs. It accepts http requests from the front end and responds with data from a postgres database.
+A RESTful back end server of the FaceRecognition website written in Nodejs. It accepts http requests that include modifying the PostgreSQL user database, making calls to the Clarifai API to process face recognition requests, and verifying logins.
