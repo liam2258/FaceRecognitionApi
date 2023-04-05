@@ -48,7 +48,7 @@ app.post('/imageurl', function(req, res) {
     image.handleApiCall(req, res)
 })
 
-//Listen on the environment variable port or port 3000 if non is available
+//Listen on the environment variable port or port 3000 if none is available
 app.listen(process.env.PORT || 3000, function() {
     console.log(`app is running on port ${process.env.PORT}`);
 })
